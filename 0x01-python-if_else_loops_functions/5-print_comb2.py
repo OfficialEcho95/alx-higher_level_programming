@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
 for num in range(1, 100):
-    print("{}".format(num), end = ", ")
-print()
+    if num == 99:
+        print("{}".format(num))
+    else:
+        print("{:02}".format(num), end = ", ")
