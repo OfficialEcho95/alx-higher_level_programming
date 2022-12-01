@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+if __name__ == "__main__":
 
-import add_0
+# A function that prints the sum of 1 and 2
 
-a = 1
-b = 2
+    import add_0
 
-print("{} + {} = {}".format(1, 2, (add_0.add(a, b))))
+    a = 1
+    b = 2
+
+    print("{} + {} = {}".format(1, 2, (add_0.add(a, b))))
