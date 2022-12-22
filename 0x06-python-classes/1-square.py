@@ -13,6 +13,6 @@ class Square:
         """
         __init__: my init method
         Args:
-            size(int): calculating the value of the square
+            size (int): calculating the value of the square
         """
         self.__size = size
