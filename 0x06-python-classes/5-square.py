@@ -47,11 +47,8 @@ class Square:
             None
         """
         if self.__size != 0:
-            print()
             for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#", end='')
-                print()
+                print("".join(["#" for j in range(self.__size)]))
         else:
             print()
         return
