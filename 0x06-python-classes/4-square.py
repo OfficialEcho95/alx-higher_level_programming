@@ -21,3 +21,22 @@ class Square:
 
     def area(self):
         return self.__size * self.__size
+
+    @property
+    def size(self):
+        """THis function is the getter method"""
+        return self.__size
+
+    @size.setter
+    def size(self, value=0):
+        """
+        Here this function is the setter
+        Args:
+            value(int): value to be resturned to the self.__size caller
+         """
+        self.__size = value
+        
+        if type(value) != int:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
