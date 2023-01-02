@@ -56,5 +56,7 @@ class Rectangle:
         """ Method that returns the perimeter but with # """
 
         for i in range(self.height):
+            if self.height == 0 or self.width == 0:
+                perimeter = 0
             print("#" * self.width)
         return ""
