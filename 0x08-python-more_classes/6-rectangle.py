@@ -62,5 +62,6 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
         
     def __del__(self):
+        """A method that deletes instances of the class"""
         print ("Bye rectangle...")
         Rectangle.number_of_instances -= 1
