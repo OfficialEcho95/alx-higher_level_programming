@@ -4,4 +4,5 @@ A class that prevents the user from dynamically creating a new instance except i
 """
 class LockedClass:
     """ The LockedClass """
+
     __slots__ = ['first_name']
