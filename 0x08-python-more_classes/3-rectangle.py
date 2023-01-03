@@ -54,8 +54,8 @@ class Rectangle:
             
     def __str__(self):
         """ Method that returns the perimeter but with # """
-
-        for i in range(self.height):
-            if self.height != 0 or self.width != 0:
-                print("#" * self.width)
-        return ""
+        string = ""
+        if self.__width != 0 and self.__height != 0:
+            string += "\n".join("#" * self.__width
+                                for j in range(self.__height))
+        return string
