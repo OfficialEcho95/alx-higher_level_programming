@@ -1,0 +1,56 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+Importing the function
+        >>> add_integer = __import__("0-add_integer").add_integer
+
+Checking for module docstring:
+	 >>> m = __import__("0-add_integer").__doc__
+	 >>> len(m) > 1
+	 True
+
+Checking for function docstring:
+	 >>> f = __import__("0-add_integer").add_integer.__doc__
+         >>> len(f) > 1
+         True
+
+Checking for sum of 2 simple numbers
+        >>> add_integer(2, 4)
+        6
+
+Checking float with integer
+	>>> add_integer(3.8, 10)
+	13
+
+Checking the sum of 2 negative integer
+        >>> add_integer(-2, -4)
+        -6
+
+Checking the sum of one positive and one negative number
+        >>> add_integer(2, -4)
+        -2
+
+Checking the sum of a string of characters and a number
+        >>> add_integer('am', 33)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+checking the sum of a string of integers with a number
+        >>> add_integer(22, 'am')
+        Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+
+checking the sum while passing only one variable
+        >>> add_integer(3)
+        101
+
+checking the sum while passing only one variable
+        >>> add_integer(None)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
