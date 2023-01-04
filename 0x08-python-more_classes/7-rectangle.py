@@ -5,9 +5,10 @@ Defines a class Rectangle
 
 
 class Rectangle:
-    """Representation of rectangle"""
-    print_symbol = '#'
+    """Representation of a rectangle"""
+
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initializes the rectangle"""
@@ -62,11 +63,10 @@ class Rectangle:
         """returns printable string representation of the rectangle"""
         string = ""
         if self.__width != 0 and self.__height != 0:
-            string += "\n".join(str(self.print_symbol(self.__width
+            string += "\n".join(str(self.print_symbol) * self.__width
                                 for j in range(self.__height))
         return string
 
     def __repr__(self):
         """returns a string representation of the rectangle for reproduction"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
