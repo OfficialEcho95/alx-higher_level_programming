@@ -5,11 +5,13 @@ Defines a class Rectangle
 
 
 class Rectangle:
+    number_of_instances = 0
     """class representation of a rectangle"""
     def __init__(self, width=0, height=0):
         """Initializes the rectangle"""
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -60,7 +62,7 @@ class Rectangle:
 
 
     def __del__(self):
-        """ Amethod which deletes an instance and prints a message """
+        """ A method which deletes an instance and prints a message """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
