@@ -42,15 +42,18 @@ class Rectangle:
         self.__height = height
 
     def area(self):
+        """This returns the area of the perimeter """
         return self.height * self.width
 
     def perimeter(self):
+        """ This function returns the perimeter of the rectangle"""
         if self.height == 0 or self.width == 0:
             return 0
         else:
             return 2 * (self.height + self.width)
 
     def __str__(self):
+        """ This is the string representation of the return"""
         for i in range(self.height):
             if self.height != 0 or self.width != 0:
                 print("#" * self.width)
@@ -65,4 +68,3 @@ class Rectangle:
         """ A method which deletes an instance and prints a message """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
