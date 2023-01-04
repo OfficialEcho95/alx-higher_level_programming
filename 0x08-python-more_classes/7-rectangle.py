@@ -6,7 +6,7 @@ Defines a class Rectangle
 
 class Rectangle:
     """Representation of a rectangle"""
-
+    print_symbol = '#'
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -69,3 +69,4 @@ class Rectangle:
     def __repr__(self):
         """returns a string representation of the rectangle for reproduction"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
