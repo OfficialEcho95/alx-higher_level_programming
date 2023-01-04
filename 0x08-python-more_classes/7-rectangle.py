@@ -5,7 +5,7 @@ Defines a class Rectangle
 
 
 class Rectangle:
-    """Representation of a rectangle"""
+    """Representation of rectangle"""
     print_symbol = '#'
     number_of_instances = 0
 
