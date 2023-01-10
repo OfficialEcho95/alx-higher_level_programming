@@ -4,5 +4,4 @@
 
 def lookup(obj):
     """ This function will return the list as specified in the above doc """
-    obj_list = []
     return dir(obj)
