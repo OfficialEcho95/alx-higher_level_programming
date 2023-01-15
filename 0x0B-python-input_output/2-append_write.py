@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains the function
+This module contains the append_write function
 """
 
 
