@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 '''
-This module contains the function to_json_string(my_obj)
+This module contains the function save_to_json_file(filename)
 '''
 import json
 
