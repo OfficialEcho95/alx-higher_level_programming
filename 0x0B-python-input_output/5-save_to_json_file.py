@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-import json
 '''
 This module contains the function to_json_string(my_obj)
 '''
+import json
 
 
 def save_to_json_file(my_obj, filename):
