@@ -5,7 +5,6 @@ This module contains the append_write function
 
 
 def append_write(filename="", text=""):
-    """a function that appends a string at the end of a text file (UTF8) 
-    and returns the number of characters added"""
+    """a function that appends and returns the number of characters added"""
     with open(filename, 'a', encoding='utf8') as f:
         return f.write(text)
