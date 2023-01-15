@@ -4,4 +4,4 @@
 def read_file(filename=""):
     ''' This read_file function'''
     with open("my_file_0.txt") as f:
-        f.read()
+        print(f.read(), end="")
