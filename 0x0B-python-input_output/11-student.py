@@ -14,7 +14,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-
+        """returns dict rpstn student attributes"""
         item = (list, dict, str, int, bool)
         obj_dict = {}
         if attrs is None:
