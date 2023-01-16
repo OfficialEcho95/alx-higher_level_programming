@@ -27,7 +27,7 @@ class Student:
                     obj_dict[key] = value
         return obj_dict
 
-            def reload_from_json(self, json):
+    def reload_from_json(self, json):
         """replaces all attributes of the Student instance"""
         for key in json:
             try:
