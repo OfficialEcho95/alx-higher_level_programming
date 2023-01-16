@@ -15,5 +15,4 @@ class Student:
         
     def to_json(self):
         """returns the dict repesentation of the class"""
-        Student = __import__('8-class_to_json.py').Student
         return self.__dict__
