@@ -2,7 +2,7 @@
 """
 This will contain the square class
 """
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 
 
 class Square(Rectangle):
