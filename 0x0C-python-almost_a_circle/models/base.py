@@ -36,3 +36,10 @@ class Base:
         to_json = cls.to_json_string(list_objects)
         with open(classname, "w") as outfile:
             outfile.write(to_json)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation"""
+        if json_string is None or json_string == "[]":
+            return []
+        return json.loads(json_string)

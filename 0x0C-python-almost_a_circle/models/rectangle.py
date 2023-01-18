@@ -38,6 +38,13 @@ class Base:
             outfile.write(to_json)
 
 
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation"""
+        if json_string is None or json_string == "[]":
+            return []
+        return json.loads(json_string)
+
 class Rectangle(Base):
     """Rectangle class which inherits from the Base class"""
     def __init__(self, width, height, x = 0, y = 0 , id = None):
