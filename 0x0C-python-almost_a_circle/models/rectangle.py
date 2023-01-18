@@ -2,7 +2,7 @@
 '''
 This module holds the class
 '''
-
+from models.base import Base
 
 class Base:
     """This is the base class of all the functions and attribute"""
