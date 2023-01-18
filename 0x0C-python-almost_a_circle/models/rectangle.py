@@ -3,6 +3,7 @@
 This module holds the class
 '''
 
+import json
 
 class Base:
     """This is the base class of all the functions and attribute"""
@@ -15,6 +16,13 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """returns the JSON string representation of list_dictionaries"""
+        if list_dictionaries == None or list_dictionaries == []:
+                return []
+        else:
+            return json.dumps(list_dictionaries)
 
 class Rectangle(Base):
     """Rectangle class which inherits from the Base class"""
