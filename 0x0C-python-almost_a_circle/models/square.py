@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""
+'''
 This will contain the square class
-"""
+'''
 from rectangle import Rectangle
 
 
