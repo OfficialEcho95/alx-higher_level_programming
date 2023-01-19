@@ -59,12 +59,6 @@ class Base:
             new.update(**dictionary)
             return new
 
-    @classmethod
-    def load_from_file(cls):
-        """function that returns a list of instances"""
-        filename = cls.__name__ + ".json"
-        return from_json_string(json_string)
-
 class Rectangle(Base):
     """Rectangle class which inherits from the Base class"""
     def __init__(self, width, height, x = 0, y = 0 , id = None):
