@@ -11,11 +11,12 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """method initialization"""
-        super().__init__(size, size, x = 0, y = 0 , id = None)
-            
+        super().__init__(size, size, x=0, y=0, id)
+
     def __str__(self):
         """string override"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
 
     @property
     def size(self):
