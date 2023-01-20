@@ -59,6 +59,20 @@ class Base:
             new.update(**dictionary)
             return new
 
+    @classmethod
+    def create(cls, **dictionary):
+        """Return a class instantied from a dictionary of attributes.
+        Args:
+            **dictionary (dict): Key/value pairs of attributes to initialize.
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
+
 class Rectangle(Base):
     """Rectangle class which inherits from the Base class"""
     def __init__(self, width, height, x = 0, y = 0 , id = None):

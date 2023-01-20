@@ -59,12 +59,15 @@ class Base:
             return new
 
     @classmethod
-    def load_from_file(cls):
-        filename = f"{cls.__name__}.json"
-        try:
-            with open(filename, "r") as file:
-                json_string = file.read()
-                json_list = cls.from_json_string(json_string)
-                return [cls.create(**obj) for obj in json_list]
-        except FileNotFoundError:
-            return []
+    def create(cls, **dictionary):
+        """Return a class instantied from a dictionary of attributes.
+        Args:
+            **dictionary (dict): Key/value pairs of attributes to initialize.
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
