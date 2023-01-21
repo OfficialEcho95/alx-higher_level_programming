@@ -72,6 +72,9 @@ class Base:
         except FileNotFoundError:
             return []
 
+
+from models.rectangle import Rectangle
+
 class Rectangle(Base):
     """Rectangle class which inherits from the Base class"""
     def __init__(self, width, height, x=0, y=0, id=None):
