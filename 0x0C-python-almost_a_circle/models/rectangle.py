@@ -6,6 +6,7 @@ This module holds the class
 
 import json
 import csv
+import turtle
 
 
 class Base:
