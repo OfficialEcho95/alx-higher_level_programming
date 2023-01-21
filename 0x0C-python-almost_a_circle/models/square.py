@@ -33,7 +33,7 @@ class Square(Rectangle):
             for i, j in enumerate(args):
                 if i == 0:
                     self.id = j
-               elif i == 1:
+                elif i == 1:
                     self.size = j
                 elif i == 2:
                     self.x = j
