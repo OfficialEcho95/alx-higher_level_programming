@@ -3,7 +3,8 @@
 '''
 This module holds the class
 '''
-                   
+
+
 class Square(Rectangle):
     """square class inheriring the rectangle"""
 
@@ -51,7 +52,6 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
-
 
     @classmethod
     def save_to_file_csv(cls, list_objs):

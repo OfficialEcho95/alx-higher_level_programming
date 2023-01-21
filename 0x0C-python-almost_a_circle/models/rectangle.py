@@ -3,9 +3,11 @@
 This module holds the class
 '''
 
+
 import json
 import csv
-import turtle 
+import turtle
+
 
 class Base:
     """This is the base class of all the functions and attribute"""
@@ -22,8 +24,8 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the JSON string representation of list_dictionaries"""
-        if list_dictionaries == None or list_dictionaries == []:
-                return "[]"
+        if list_dictionaries is None or list_dictionaries == []:
+            return "[]"
         else:
             return json.dumps(list_dictionaries)
 
@@ -38,7 +40,6 @@ class Base:
         to_json = cls.to_json_string(list_objects)
         with open(classname, "w") as outfile:
             outfile.write(to_json)
-
 
     @staticmethod
     def from_json_string(json_string):
@@ -156,7 +157,7 @@ class Base:
 
 class Rectangle(Base):
     """Rectangle class which inherits from the Base class"""
-    def __init__(self, width, height, x = 0, y = 0 , id = None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """class initializer"""
         Base.__init__(self, id)
         if type(width) != int:
@@ -207,7 +208,7 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = x
 
-    @property    
+    @property
     def y(self):
         """y getter"""
         return self.__y
@@ -239,7 +240,10 @@ class Rectangle(Base):
 
     def __str__(self):
         """overrides the str display to custom"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                       self.__y,
+                                                       self.__width,
+                                                       self.__height)
 
     def update(self, *args, **kwargs):
         """Update the Rectangle.
