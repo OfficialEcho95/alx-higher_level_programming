@@ -1,4 +1,4 @@
--- a script that lists all tv shows
+-- a script that lists all tv shows in the given data base
 SELECT tv_shows.title, tv_show_genres.genre_id
 	FROM tv_shows 
 	INNER JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id 
