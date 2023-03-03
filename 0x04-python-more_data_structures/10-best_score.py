@@ -1,9 +1,9 @@
 #!/usr/bin/python3
+'''best score'''
 
 def best_score(a_dictionary):
     if a_dictionary == None:
         return "None"
-    for k, v in a_dictionary.items():
-        m = max(v)
-        if m:
-            print(k)
+
+    max_v = max(a_dictionary)
+    return (max_v)
