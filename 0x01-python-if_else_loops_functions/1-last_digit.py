@@ -12,4 +12,4 @@ elif last == 0:
     print("Last digit of {} is {}".format(number, last) + " and is 0")
 elif last < 6 and last != 0:
     print("Last digit of {} is {}".format(number, last)
-    + " and is less than 6 and not 0")
+                + " and is less than 6 and not 0")
