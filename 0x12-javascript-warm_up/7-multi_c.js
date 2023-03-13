@@ -10,6 +10,4 @@ if (process.argv[2]) {
       i++;
     }
   }
-} else {
-  console.log('Missing number of occurrences');
 }
