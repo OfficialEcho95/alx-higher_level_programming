@@ -1,17 +1,20 @@
 #!/usr/bin/node
 let i = 0;
+let message = '';
 
 while (i < 3) {
   switch (i) {
     case 0:
-      console.log('C is fun');
+      message += 'C is fun\n';
       break;
     case 1:
-      console.log('Python is cool');
+      message += 'Python is cool\n';
       break;
     case 2:
-      console.log('JavaScript is amazing');
+      message += 'JavaScript is amazing';
       break;
   }
   i++;
 }
+
+console.log(message);
