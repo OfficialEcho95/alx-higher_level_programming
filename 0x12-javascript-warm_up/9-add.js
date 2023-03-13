@@ -1,14 +1,15 @@
 #!/usr/bin/node
-if (process.argv[2]) {
-  if (isNaN(+process.argv[2])) {
-    console.log('Not a number');
-  } else {
-    console.log(add(+process.argv[2], +process.argv[3]));
-  }
-} else {
-  console.log('No argument');
+function add (a, b) {
+  return a + b;
 }
 
-function add(a, b) {
-	return a + b;
+const arg1 = parseInt(process.argv[2]);
+const arg2 = parseInt(process.argv[3]);
+
+if (isNaN(arg1) || isNaN(arg2)) {
+  if (process.argv.length < 4) {
+    console.log('NaN');
+  }
+} else {
+  console.log(add(arg1, arg2));
 }
