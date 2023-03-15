@@ -1,0 +1,19 @@
+#!/usr/bin/node
+const dict = require('./101-data').dict;
+
+const newDict = {};
+
+// Iterate over the keys and values of the input dictionary
+for (const [userId, occurrences] of Object.entries(dict)) {
+  if (newDict[occurrences]) {
+    // If the current number of occurrences already exists in the new 
+	//dictionary, add the user ID to its list of IDs
+    newDict[occurrences].push(userId);
+  } else {
+    // Otherwise, create a new list with the user ID as its 
+	//only element and add it to the new dictionary
+    newDict[occurrences] = [userId];
+  }
+}
+
+console.log(newDict);
