@@ -29,15 +29,15 @@ class Rectangle {
   }
 }
 
-module.exports = class Square extends Rectangle {
+class Square extends Rectangle {
   constructor (size) {
     super(size, size);
     this.size = size;
   }
-
+ 
   charPrint (c) {
     if (c === undefined) {
-      c = 'X';
+      this.print();
     }
     for (let row = 0; row < this.height; row++) {
       let rec = '';
@@ -47,4 +47,4 @@ module.exports = class Square extends Rectangle {
       console.log(rec);
     }
   }
-};
+}
