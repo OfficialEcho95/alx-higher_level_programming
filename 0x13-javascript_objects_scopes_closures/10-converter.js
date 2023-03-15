@@ -1,3 +1,6 @@
 #!/usr/bin/node
-const toBinary = exports.converter(2);
-console.log(toBinary(10));
+exports.converter = function (base) {
+  return function (num) {
+    return num.toString(base);
+  };
+};
