@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-This module lists all cities in states where name matches 
+This module lists all cities in states where name matches
 where the statename is the argument
 '''
 import MySQLdb
