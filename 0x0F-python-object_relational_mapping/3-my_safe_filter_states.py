@@ -20,7 +20,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     query = "SELECT * FROM states WHERE name LIKE %s\
                 ORDER BY id ASC"
-    name_state = "state_name%"
+    name_state = state_name + "%"
     cur.execute(query, (name_state,))
 
     for row in cur.fetchall():
