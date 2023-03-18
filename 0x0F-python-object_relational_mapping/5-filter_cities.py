@@ -27,7 +27,7 @@ if __name__ == "__main__":
     cur.execute(query, (name_state,))
 
     rows = cur.fetchall()
-    cities = [row[0] for row in rows]
+    cities = [row[2] for row in rows]
 
     print(", ".join(cities))
 
