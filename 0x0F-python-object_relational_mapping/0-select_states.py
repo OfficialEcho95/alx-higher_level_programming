@@ -2,11 +2,25 @@
 '''
 This module lists all states from the db
 '''
-from MySQLdb import _mysql
-db = _mysql.connect(user="Emmanuel", password="password",
-                    database="hbtn_0e_0_usa")
-db.query("""SELECT states FROM hbtn_0e_0_usa""")
-result = db.store_result()
+import MySQLdb
+import sys
 
-for state in result.fetch_row(maxrows=0):
-    print(state[0])
+if __name__ == "__main__":
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=username,
+                         passwd=password,
+                         db=db_name)
+
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+
+    for row in cur.fetchall():
+        print(row)
+
+    cur.close()
+    db.close()
