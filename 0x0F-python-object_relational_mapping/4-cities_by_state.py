@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+'''
+This module returns the cities of the db
+'''
 import MySQLdb
 import sys
 
