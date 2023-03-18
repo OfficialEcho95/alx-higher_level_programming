@@ -26,8 +26,10 @@ if __name__ == "__main__":
     name_state = state_name + "%"
     cur.execute(query, (name_state,))
 
-    for row in cur.fetchall():
-        print(row)
+    rows = cursor.fetchall()
+    cities = [row[0] for row in rows]
+
+    print(", ".join(cities))
 
     cur.close()
     db.close()
