@@ -22,9 +22,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State[0]).order_by(State.id[0])
+    states = session.query(State).order_by(State.id).first()
 
     for state in states:
+        if state is None:
+            print("Nothing")
         print(f"{state.id}: {state.name}")
 
     session.close()
