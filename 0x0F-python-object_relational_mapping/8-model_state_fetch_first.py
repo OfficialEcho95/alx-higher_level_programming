@@ -24,9 +24,9 @@ if __name__ == "__main__":
 
     states = session.query(State).order_by(State.id).first()
 
-    for state in states:
-        if state is None:
-            print("Nothing")
+    if state is None:
+        print("Nothing")
+    else:
         print(f"{state.id}: {state.name}")
 
     session.close()
