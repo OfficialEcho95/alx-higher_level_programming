@@ -14,7 +14,8 @@ if __name__ == "__main__":
     db_name = sys.argv[3]
 
     # Create a connection to the MySQL server
-    engine = create_engine(f'mysql://{username}:{password}@localhost:3306/{db_name}')
+    engine = create_engine(f'mysql://{username}:{password}@localhost:3306/\
+                           {db_name}')
     Base.metadata.create_all(engine)
 
     # Create a session
