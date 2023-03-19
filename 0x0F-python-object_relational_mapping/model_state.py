@@ -3,7 +3,7 @@
 This module contains the class definition of a state
 and an instance Base = declarative_base()
 '''
-from sqlalchemy import Column, String, create_engine, Integer
+from sqlalchemy import Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
 
 engine = create_engine('mysql://localhost:3306/mydatabase')
@@ -18,4 +18,7 @@ class State (Base):
     name = Column(String(128), nullable=False)
 
 
-Base.metadata.create_all(engine)
+if __name__ == '__main__':
+    from sqlalchemy import create_engine
+    engine = create_engine('mysql://localhost:3306/mydatabase')
+    Base.metadata.create_all(engine)
