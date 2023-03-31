@@ -6,8 +6,12 @@ import sys
 import requests
 
 
-if __name__ == "__main__":
-    url = sys.argv[1]
+def main():
+    result = requests.get(sys.argv[1])
+    header = result.headers.get("X-Request-Id")
 
-    r = requests.get(url)
-    print(r.headers.get("X-Request-Id")
+    print(header)
+
+
+if __name__ == '__main__':
+    main()

@@ -7,9 +7,12 @@ import sys
 import urllib.request
 
 
-if __name__ == "__main__":
-    url = sys.argv[1]
+def main():
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        header = response.getheader("X-Request-Id")
 
-    request = urllib.request.Request(url)
-    with urllib.request.urlopen(request) as response:
-        print(dict(response.headers).get("X-Request-Id"))
+    print(header)
+
+
+if __name__ == '__main__':
+    main()
